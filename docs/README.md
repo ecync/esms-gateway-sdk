@@ -1,4 +1,4 @@
-# esms-gateway-sdk
+# @ecync/esms-gateway-sdk
 
 An unofficial TypeScript SDK for Dialog's eSMS Gateway API, built by Adeona Technologies (Pvt) Ltd
 and offered through the Dialog Marketplace.
@@ -29,7 +29,7 @@ flow for every eSMS account.
 ## Installation
 
 ```bash
-npm install esms-gateway-sdk
+npm install @ecync/esms-gateway-sdk
 ```
 
 Requires Node.js 18 or newer (for native `fetch`).
@@ -37,7 +37,7 @@ Requires Node.js 18 or newer (for native `fetch`).
 ## Quick start: POST API
 
 ```ts
-import { EsmsClient, PaymentMethod } from "esms-gateway-sdk";
+import { EsmsClient, PaymentMethod } from "@ecync/esms-gateway-sdk";
 
 const client = new EsmsClient({
   credentials: {
@@ -67,7 +67,7 @@ it expires. If you want to fail fast on bad credentials (for example, at applica
 ## Quick start: GET API
 
 ```ts
-import { EsmsUrlClient } from "esms-gateway-sdk";
+import { EsmsUrlClient } from "@ecync/esms-gateway-sdk";
 
 const client = new EsmsUrlClient({ esmsqk: process.env.ESMS_QK! });
 
@@ -86,7 +86,7 @@ Every failure from the eSMS API, whether it is a JSON `{ status: "failed" }` env
 API or a bare numeric failure code from the GET API, is thrown as an `EsmsApiError`:
 
 ```ts
-import { EsmsApiError } from "esms-gateway-sdk";
+import { EsmsApiError } from "@ecync/esms-gateway-sdk";
 
 try {
   await client.sendSms({ recipients: ["714551682"], message: "Hi", transactionId: 1 });
@@ -158,7 +158,7 @@ client-side throttling:
   side.
 
 ```ts
-import { RATE_LIMITS_TPS, BLACKOUT_WINDOW_NOTE } from "esms-gateway-sdk";
+import { RATE_LIMITS_TPS, BLACKOUT_WINDOW_NOTE } from "@ecync/esms-gateway-sdk";
 ```
 
 ## Testing this SDK's own code

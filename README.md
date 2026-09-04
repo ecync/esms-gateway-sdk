@@ -1,9 +1,5 @@
 # esms-gateway-sdk
 
-[![npm version](https://img.shields.io/npm/v/esms-gateway-sdk.svg)](https://www.npmjs.com/package/esms-gateway-sdk)
-[![license](https://img.shields.io/npm/l/esms-gateway-sdk.svg)](./LICENSE)
-[![node](https://img.shields.io/node/v/esms-gateway-sdk.svg)](https://nodejs.org)
-
 An unofficial TypeScript SDK for Dialog's eSMS Gateway API (published by Adeona Technologies (Pvt)
 Ltd).
 
@@ -11,16 +7,6 @@ Ltd).
 > or Adeona Technologies. It was built independently from the publicly available "eSMS API
 > Documentation v3.0" PDF. For anything account, billing, or security related, the source of truth
 > is [https://esms.dialog.lk](https://esms.dialog.lk), not this repository.
-
-## Why this exists
-
-Dialog's eSMS Gateway ships official Java and PHP plugins, but nothing for the Node/TypeScript
-ecosystem. This package fills that gap with:
-
-- A fully typed client for both the POST/JSON API and the simpler GET/query-string API.
-- Automatic access token management: no manual login calls, no manual refresh timers.
-- Typed errors (`EsmsApiError`, `EsmsValidationError`) instead of parsing string fields yourself.
-- Zero runtime dependencies: just native `fetch`, on Node 18+.
 
 Full documentation lives in [docs/README.md](./docs/README.md), including:
 
@@ -31,13 +17,13 @@ Full documentation lives in [docs/README.md](./docs/README.md), including:
 ## Install
 
 ```bash
-npm install esms-gateway-sdk
+npm install @ecync/esms-gateway-sdk
 ```
 
 ## Quick start
 
 ```ts
-import { EsmsClient } from "esms-gateway-sdk";
+import { EsmsClient } from "@ecync/esms-gateway-sdk";
 
 const client = new EsmsClient({
   credentials: { username: process.env.ESMS_USERNAME!, password: process.env.ESMS_PASSWORD! }

@@ -144,7 +144,7 @@ import {
   MAX_TRANSACTION_ID_DIGITS,
   MAX_SOURCE_ADDRESS_LENGTH,
   BLACKOUT_WINDOW_NOTE
-} from "esms-gateway-sdk";
+} from "@ecync/esms-gateway-sdk";
 ```
 
 These mirror facts stated in the document (section 5, "API Utilization Related Restrictions", and
