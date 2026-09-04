@@ -1,6 +1,6 @@
 {
   "name": "@ecync/esms-gateway-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unofficial, community-built TypeScript SDK for Dialog's eSMS Gateway API (Adeona Technologies). Not affiliated with, endorsed by, or published by Dialog Axiata PLC or Adeona Technologies.",
   "type": "module",
   "main": "./dist/index.js",
